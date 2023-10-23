@@ -4,7 +4,7 @@ theme = "hugo-theme-basic"
 languageCode = "en-us"
 enableEmoji = true
 copyright = """
-<div class="flex flex-wrap justify-between" style="column-gap: 20px; row-gap: 20px;"> <div> © 2023 <a href='/blog/'>Arjun Neupane</a> </div> <div class="flex flex-column">
+<div class="flex flex-wrap justify-between" style="column-gap: 20px; row-gap: 20px;"> <div> © 2023 <a href='blog/'>Arjun Neupane</a> </div> <div class="flex flex-column">
   <div><b class="mr2">GH:</b><a href='https://github.com/thearjunneupane'>thearjunneupane</a></div>
   <div><b class="mr2">FB:</b><a href='https://facebook.com/thearjunneupane'>thearjunneupane</a></div>
 </div> </div>"""
