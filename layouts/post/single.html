@@ -9,7 +9,7 @@
   <span class="b">/ </span>
   <a href="{{ .Site.BaseURL  }}" class="b bb bw1 pb1 no-underline black">{{ .Site.Title }}</a>
   <span class="b"> / </span>
-  <a href="/post" class="b bb bw1 pb1 no-underline black">blogs</a>
+  <a href="{{ .Site.BaseURL  }}post" class="b bb bw1 pb1 no-underline black">blogs</a>
   <span class="b"> / </span>
   <span class="b pb1 no-underline black">{{ .Title }}</span>
 
@@ -22,7 +22,7 @@
     <h1 itemprop="name" id="title">{{ .Title }}</h1>
     <span class="f6 gray">{{ .Date.Format "January 2, 2006" }}</span>
 
-      <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+      <article itemprop="articleBody" id="content" class="w-90 lh-copy" style="word-wrap: break-word;">
         {{ .Content }}
       </article>
 
@@ -37,7 +37,7 @@
         <section class="mt4">
           {{ $readMore := ":wave:" }}
           {{ $series := .Params.series | urlize}}
-          <h3>{{ $readMore | emojify }} Related posts in the <a href="/series/{{ $series }}" class="b bb bw1 pb1 no-underline black">{{ .Params.Series }}</a> series...</h3>
+          <h3>{{ $readMore | emojify }} Related posts in the <a href="{{ .Site.BaseURL  }}series/{{ $series }}" class="b bb bw1 pb1 no-underline black">{{ .Params.Series }}</a> series...</h3>
       
           {{ $posts := index .Site.Taxonomies.series $series }}
          
@@ -64,6 +64,16 @@
 
   </section>
 
-  {{ partial "footer.html" . }}
+  <script src="https://utteranc.es/client.js"
+  repo="thearjunneupane/comments"
+  issue-term="title"
+  label="comments"
+  theme="preferred-color-scheme"
+  crossorigin="anonymous"
+  async>
+</script>  
+
+  {{ partial "footer.html" . }} 
+
   </body>
 </html>
