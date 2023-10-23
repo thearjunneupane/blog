@@ -1,3 +1,45 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "thearjunneupane.github.io"
+title = "Less is More"
+theme = "hugo-theme-basic"
+languageCode = "en-us"
+enableEmoji = true
+copyright = """
+<div class="flex flex-wrap justify-between" style="column-gap: 20px; row-gap: 20px;"> <div> © 2023 <a href='/'>Arjun Neupane</a> </div> <div class="flex flex-column">
+  <div><b class="mr2">GH:</b><a href='https://github.com/thearjunneupane'>thearjunneupane</a></div>
+  <div><b class="mr2">FB:</b><a href='https://facebook.com/thearjunneupane'>thearjunneupane</a></div>
+</div> </div>"""
+description = "Basic personal site theme styled with minimal tachyons, syntax highlighting, and blog series configuration."
+
+[markup."markup.tableOfContents"]
+startLevel = 2
+endLevel = 5
+ordered = true
+
+[taxonomies]
+category = "categories"
+series = "series"
+tag = "tags"
+
+[params]
+titleEmoji = ":tada:"
+twitter = "siegerts"
+
+  [[params.menu]]
+  name = "blogs"
+  url = "post/"
+
+  [[params.menu]]
+  name = "post series"
+  url = "series/"
+
+  [[params.menu]]
+  name = "about"
+  url = "about/"
+
+  [[params.menu]]
+  name = "tags"
+  url = "tags/"
+
+[Permalinks]
+post = "post/:slug"
+
