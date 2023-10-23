@@ -1,4 +1,4 @@
-baseURL = "thearjunneupane.github.io"
+baseURL = "https://thearjunneupane.github.io/blog/"
 title = "Less is More"
 theme = "hugo-theme-basic"
 languageCode = "en-us"
